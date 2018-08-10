@@ -2,14 +2,14 @@
   <div class="form-group ">
     <div class="col-xs-6 text-label-color">
       <label for="primaryPhone">Primary Phone:</label>
-      <input class="form-controls" id="primaryPhone" formControlName="primaryPhone" type="text" [ngClass]="{ 'is-invalid': submitted && f.primaryPhone.errors }">
+      <input class="form-controls" id="primaryPhone" formControlName="primaryPhone" type="number" [ngClass]="{ 'is-invalid': submitted && f.primaryPhone.errors }">
       <span *ngIf="submitted && f.primaryPhone.errors" class="invalid-feedback">
         <span *ngIf="f.primaryPhone.errors.required">Primary Phone is required</span>
       </span>
     </div>
     <div class="col-xs-6 text-label-color">
       <label for="cellPhone">Cell Phone:</label>
-      <input class="form-controls" id="cellPhone" formControlName="cellPhone" type="text" [ngClass]="{ 'is-invalid': submitted && f.cellPhone.errors }">
+      <input class="form-controls" id="cellPhone" formControlName="cellPhone" type="number" [ngClass]="{ 'is-invalid': submitted && f.cellPhone.errors }">
       <span *ngIf="submitted && f.cellPhone.errors" class="invalid-feedback">
         <span *ngIf="f.cellPhone.errors.required">Cell Phone is required</span>
       </span>
