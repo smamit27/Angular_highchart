@@ -16,7 +16,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.profileForm =this.formBuilder.group({
-      primaryPhone:['', [Validators.required,Validators.pattern("[0-9]{0-10}")]],
+      primaryPhone:['', Validators.required],
       cellPhone: ['', Validators.required],
       emailAddress: ['', [Validators.required,Validators.email]],
       confirmEmailAddress: ['', Validators.required],
