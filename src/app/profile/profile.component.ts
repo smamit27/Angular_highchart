@@ -12,7 +12,6 @@ export class ProfileComponent implements OnInit {
   submitted = false;
   profileForm :FormGroup;
 
-
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -26,15 +25,14 @@ export class ProfileComponent implements OnInit {
     });
   }
   get f() { return this.profileForm.controls; }
-
-
-    onSubmit() {
+  onSubmit() {    
       this.submitted = true;
-      if (this.profileForm.invalid) { return;}
+      if (this.profileForm.invalid) { 
+        return;
+      }
       let profileDetails = this.profileForm.value;
       this.profileObj.push(profileDetails);
       console.log(this.profileObj);
-
     }
 
 }
